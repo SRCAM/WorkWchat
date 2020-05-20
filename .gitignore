@@ -1,0 +1,9 @@
+/data/conf/database.php
+/html/.idea/
+/.idea/
+/data/install.lock
+/data/runtime/*
+./vendor/
+/.svn/
+./Test.php
+/MP_verify_Wpwuh3sXUnYpnud7.txt
