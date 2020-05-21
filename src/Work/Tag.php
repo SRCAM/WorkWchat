@@ -1,7 +1,7 @@
 <?php
 
 
-namespace WorkWechat\Actions;
+namespace WorkWechat\Work;
 
 
 use WorkWechat\Exception\ArgumentException;

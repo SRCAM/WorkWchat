@@ -8,14 +8,14 @@ use IteratorAggregate;
 use think\helper\Str;
 
 /**
- * @property  \WorkWechat\Actions\Gettoken $gettoken 获取token
- * @property  \WorkWechat\Actions\Department $department 部门
- * @property  \WorkWechat\Actions\Agent $agent
- * @property  \WorkWechat\Actions\Batch $batch  批量操作
- * @property  \WorkWechat\Actions\ExternalContact $externalcontact 外部联系人
- * @property  \WorkWechat\Actions\User $user  用户
- * @property   \WorkWechat\Actions\Tag $tag 标签
- * @see  \WorkWechat\Actions\Tag
+ * @property  \WorkWechat\Work\Gettoken $gettoken 获取token
+ * @property  \WorkWechat\Work\Department $department 部门
+ * @property  \WorkWechat\Work\Agent $agent
+ * @property  \WorkWechat\Work\Batch $batch  批量操作
+ * @property  \WorkWechat\Work\ExternalContact $externalcontact 外部联系人
+ * @property  \WorkWechat\Work\User $user  用户
+ * @property   \WorkWechat\Work\Tag $tag 标签
+ * @see  \WorkWechat\Work\Tag
  * Class Container
  * @package WorkWechat
  */
@@ -36,13 +36,13 @@ class Container implements \ArrayAccess, IteratorAggregate
     private $config = [];
 
     private $alias = array(
-        'agent' => \WorkWechat\Actions\Agent::class,
-        'batch' => \WorkWechat\Actions\Batch::class,
-        'department' => \WorkWechat\Actions\Department::class,
-        'externalcontact' => \WorkWechat\Actions\ExternalContact::class,
-        'tag' => \WorkWechat\Actions\Tag::class,
-        'user' => \WorkWechat\Actions\User::class,
-        'gettoken' => \WorkWechat\Actions\Gettoken::class,
+        'agent' => \WorkWechat\Work\Agent::class,
+        'batch' => \WorkWechat\Work\Batch::class,
+        'department' => \WorkWechat\Work\Department::class,
+        'externalcontact' => \WorkWechat\Work\ExternalContact::class,
+        'tag' => \WorkWechat\Work\Tag::class,
+        'user' => \WorkWechat\Work\User::class,
+        'gettoken' => \WorkWechat\Work\Gettoken::class,
     );
 
     /**
