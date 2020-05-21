@@ -7,3 +7,5 @@
 /.svn/
 ./Test.php
 /MP_verify_Wpwuh3sXUnYpnud7.txt
+/vendor/
+/composer.lock

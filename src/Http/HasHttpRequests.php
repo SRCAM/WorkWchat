@@ -20,7 +20,7 @@ class HasHttpRequests
         ],
     ];
 
-    public function getHttpClient()
+    protected function getHttpClient()
     {
         $this->httpClient = new \GuzzleHttp\Client([
             'base_uri' => 'https://qyapi.weixin.qq.com',
@@ -43,7 +43,7 @@ class HasHttpRequests
      * @throws NotfindException
      * @throws WorkWechatApiException
      */
-    public function request($url, $method = 'GET', $options = [])
+    protected function request($url, $method = 'GET', $options = [])
     {
 
         $method = strtoupper($method);

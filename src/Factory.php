@@ -5,7 +5,6 @@ namespace WorkWechat;
 class Factory
 {
     private static $config;
-
     /**
      * @param array $config [corp_id=>企业id agent_id=>应用id  secret=>密匙]
      * @param array $config
