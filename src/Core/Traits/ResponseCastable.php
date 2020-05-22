@@ -36,7 +36,6 @@ trait ResponseCastable
 //                   an instanceof %s', Arrayable::class));
                     //todo: 抛出错误
                 }
-
                 return new $type($response);
         }
     }
