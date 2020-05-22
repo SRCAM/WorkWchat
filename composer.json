@@ -9,8 +9,9 @@
   "require": {
     "topthink/think-helper": "^3.1",
     "guzzlehttp/guzzle": "^6.5",
-    "ext-http": "*",
-    "php": ">=7.0"
+    "php": ">=7.0",
+    "psr/simple-cache": "^1.0",
+    "symfony/cache": "^4.4"
   },
   "autoload": {
     "psr-4": {
