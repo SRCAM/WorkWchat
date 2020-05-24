@@ -17,7 +17,7 @@ class RequestProvider implements ServiceProviderInterface
     public function register(Container $pimple)
     {
         $pimple['request'] = function () {
-            return Request  ::createFromGlobals();
+            return Request ::createFromGlobals();
         };
     }
 }

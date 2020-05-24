@@ -4,7 +4,7 @@
 namespace WorkWechat\Core;
 
 
-class Config extends \think\Collection
+class Config extends Collection
 {
 
 }

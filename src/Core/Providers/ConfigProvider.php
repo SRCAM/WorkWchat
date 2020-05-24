@@ -5,8 +5,8 @@ namespace WorkWechat\Core\Providers;
 
 
 use Pimple\Container;
-use Pimple\ServiceProviderInterface;
 use WorkWechat\Core\Config;
+use Pimple\ServiceProviderInterface;
 
 class ConfigProvider implements ServiceProviderInterface
 {
@@ -16,7 +16,7 @@ class ConfigProvider implements ServiceProviderInterface
     public function register(Container $pimple)
     {
         $pimple['config'] = function ($app) {
-            return new Config($app);
+            return new Config($app->getConfig());
         };
     }
 }

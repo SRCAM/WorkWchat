@@ -5,20 +5,26 @@ namespace WorkWechat\Core;
 
 
 use Pimple\Container;
+use WorkWechat\Core\Providers\ConfigProvider;
+use WorkWechat\Core\Providers\HttpClientProvider;
+use WorkWechat\Core\Providers\RequestProvider;
 
-//use WorkWechat\Core\Providers\ConfigProvider;
-//use WorkWechat\Core\Providers\HttpClientProvider;
-//use WorkWechat\Core\Providers\RequestProvider;
 
 /**
- * @property  \WorkWechat\Core\Providers\ConfigProvider $config
- * @property  \WorkWechat\Core\Providers\HttpClientProvider $http_client
- * @property  \WorkWechat\Core\Providers\RequestProvider $request
+ * @property  \WorkWechat\Core\config                    $config
+ * @property  \GuzzleHttp\Client                         $http_client
+ * @property  \Symfony\Component\HttpFoundation\Request  $request
+ *
  * Class ServiceContainer
  * @package WorkWechat\Core
  */
 class ServiceContainer extends Container
 {
+
+    /**
+     *
+     * @var array
+     */
     protected $providers = [];
 
     protected $defaultConfig = [];
@@ -53,16 +59,40 @@ class ServiceContainer extends Container
     public function getProviders()
     {
         return array_merge([
-            \WorkWechat\Core\Providers\ConfigProvider::class,
-            \WorkWechat\Core\Providers\HttpClientProvider::class,
-            \WorkWechat\Core\Providers\RequestProvider::class
+            ConfigProvider::class,
+            HttpClientProvider::class,
+            RequestProvider::class
         ], $this->providers);
     }
 
+    /**
+     *
+     * @param $id
+     * @return mixed
+     */
+    public function __get($id)
+    {
+        return $this->offsetGet($id);
+    }
+
+    /**
+     * Magic set access.
+     *
+     * @param string $id
+     * @param mixed  $value
+     */
+    public function __set($id, $value)
+    {
+        $this->offsetSet($id, $value);
+    }
+
+    /**
+     * @param array $providers
+     */
     public function registerProviders(array $providers)
     {
         foreach ($providers as $provider) {
-            parent::register($provider);
+            parent::register(new $provider());
         }
     }
 }
