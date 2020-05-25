@@ -15,10 +15,10 @@ class Cent extends BaseClient
 {
     /**
      * 创建部门
-     * @link https://work.weixin.qq.com/api/doc/90000/90135/90205
-     * @param array $data
-     * @return \Psr\Http\Message\ResponseInterface|void
-     * @throws \GuzzleHttp\Exception\GuzzleException
+     * @link    https://work.weixin.qq.com/api/doc/90000/90135/90205
+     * @param   array $data
+     * @return  \Psr\Http\Message\ResponseInterface|void
+     * @throws  \GuzzleHttp\Exception\GuzzleException
      */
     public function create(array $data)
     {
@@ -27,11 +27,11 @@ class Cent extends BaseClient
 
     /**
      * 更新部门
-     * @link https://work.weixin.qq.com/api/doc/90000/90135/90205
-     * @param int $id 部门id
-     * @param array $data 需要修改的数据
-     * @return \Psr\Http\Message\ResponseInterface|void
-     * @throws \GuzzleHttp\Exception\GuzzleException
+     * @link    https://work.weixin.qq.com/api/doc/90000/90135/90205
+     * @param   int $id 部门id
+     * @param   array $data 需要修改的数据
+     * @return  \Psr\Http\Message\ResponseInterface|void
+     * @throws  \GuzzleHttp\Exception\GuzzleException
      */
     public function update(int $id, array $data)
     {
@@ -40,10 +40,10 @@ class Cent extends BaseClient
 
     /**
      * 删除部门
-     * @link  https://work.weixin.qq.com/api/doc/90000/90135/90207
-     * @param int $id 部门id
-     * @return \Psr\Http\Message\ResponseInterface|void
-     * @throws \GuzzleHttp\Exception\GuzzleException
+     * @link    https://work.weixin.qq.com/api/doc/90000/90135/90207
+     * @param   int $id 部门id
+     * @return  \Psr\Http\Message\ResponseInterface|void
+     * @throws  \GuzzleHttp\Exception\GuzzleException
      */
     public function delete(int $id)
     {
@@ -52,10 +52,10 @@ class Cent extends BaseClient
 
     /**
      * 获取部门列表
-     * @link  https://work.weixin.qq.com/api/doc/90000/90135/90208
-     * @param int $id 部门id
-     * @return \Psr\Http\Message\ResponseInterface|void
-     * @throws \GuzzleHttp\Exception\GuzzleException
+     * @link    https://work.weixin.qq.com/api/doc/90000/90135/90208
+     * @param   int $id 部门id
+     * @return  \Psr\Http\Message\ResponseInterface|void
+     * @throws  \GuzzleHttp\Exception\GuzzleException
      */
     public function getUserLIst(int $id = null)
     {
