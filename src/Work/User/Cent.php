@@ -88,7 +88,7 @@ class Cent extends BaseClient
         ];
         return $this->requestGet('cgi-bin/user/simplelist', $params);
     }
-
+    
     /**
      * 获取部门成员详情
      * @link https://work.weixin.qq.com/api/doc/90000/90135/90201
@@ -119,9 +119,5 @@ class Cent extends BaseClient
         return $this->requestPostJson('cgi-bin/user/convert_to_openid', ['userid' => $userId]);
     }
 
-//    public function ()
-//    {
-//
-//    }
 
 }

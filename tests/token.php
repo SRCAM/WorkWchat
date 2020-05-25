@@ -3,6 +3,8 @@ require_once '../vendor/autoload.php';
 //$config = new \WorkWechat\Core\ServiceContainer(['dddd'=>32132321]);
 $test = new \WorkWechat\Core\Test(['321321'=>'321321']);
 
+$d = new \WorkWechat\Work\Department();
+$d->update()
 //var_dump($test->http_client);
 //exit();
 

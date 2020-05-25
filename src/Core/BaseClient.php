@@ -12,6 +12,11 @@ use WorkWechat\Core\Http\Response;
 use WorkWechat\Core\Interfaces\AccessTokenInterface;
 use WorkWechat\Core\Traits\HasHttpRequests;
 
+/**
+ * @mixin $t
+ * Class BaseClient
+ * @package WorkWechat\Core
+ */
 class BaseClient
 {
 
@@ -119,6 +124,7 @@ class BaseClient
      * @param string $url
      * @param string $method
      * @param array $options
+     * @return Response
      * @throws GuzzleException|GuzzleException
      */
     public function requestRaw(string $url, string $method = 'GET', array $options = [])
